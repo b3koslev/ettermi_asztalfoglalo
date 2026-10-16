@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éttermi asztalfoglalás</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Éttermi asztalfoglalás</h1>
+
+    <h2>Új foglalás</h2>
+    <form id="foglalasForm">
+        <input type="hidden" id="foglalasId">
+
+        <label for="nev">Vendég neve:</label>
+        <input type="text" id="nev" required>
+
+        <label for="telefon">Telefonszám:</label>
+        <input type="text" id="telefon" required>
+
+        <label for="datum">Dátum:</label>
+        <input type="date" id="datum" required>
+
+        <label for="ido">Időpont:</label>
+        <input type="time" id="ido" required>
+
+        <label for="letszam">Vendégek száma:</label>
+        <input type="number" id="letszam" min="1" max="30" value="2" required>
+
+        <label for="megjegyzes">Megjegyzés:</label>
+        <textarea id="megjegyzes" rows="3"></textarea>
+
+        <button type="submit" id="mentesGomb">Foglalás mentése</button>
+        <button type="button" id="megseGomb" hidden>Mégse</button>
+    </form>
+
+    <h2>Foglalások listája</h2>
+    <label for="kereses">Keresés név alapján:</label>
+    <input type="text" id="kereses" placeholder="Vendég neve">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Név</th>
+                <th>Telefon</th>
+                <th>Dátum</th>
+                <th>Időpont</th>
+                <th>Létszám</th>
+                <th>Megjegyzés</th>
+                <th>Műveletek</th>
+            </tr>
+        </thead>
+        <tbody id="foglalasLista"></tbody>
+    </table>
+
+    <p id="uzenet"></p>
+    <p id="statisztika"></p>
+</body>
+</html>

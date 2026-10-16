@@ -9,6 +9,10 @@ h1, h2 {
     color: #285943;
 }
 
+h1 {
+    text-align: center;
+}
+
 form {
     background-color: white;
     padding: 20px;
@@ -67,6 +71,10 @@ th {
 #uzenet {
     color: #285943;
     font-weight: bold;
+}
+
+sup {
+    color: red;
 }
 
 @media (max-width: 800px) {

@@ -14,19 +14,19 @@
     <form id="foglalasForm">
         <input type="hidden" id="foglalasId">
 
-        <label for="nev">Vendég neve:</label>
-        <input type="text" id="nev" required>
+        <label for="nev">Vendég neve: <sup>*</sup></label>
+        <input type="text" id="nev" placeholder="pl. Kiss Pista" required>
 
-        <label for="telefon">Telefonszám:</label>
-        <input type="text" id="telefon" required>
+        <label for="telefon">Telefonszám: <sup>*</sup></label>
+        <input type="text" id="telefon" placeholder="pl. +36301234567" required>
 
-        <label for="datum">Dátum:</label>
+        <label for="datum">Dátum: <sup>*</sup></label>
         <input type="date" id="datum" required>
 
-        <label for="ido">Időpont:</label>
+        <label for="ido">Időpont: <sup>*</sup></label>
         <input type="time" id="ido" required>
 
-        <label for="letszam">Vendégek száma:</label>
+        <label for="letszam">Vendégek száma: <sup>*</sup></label>
         <input type="number" id="letszam" min="1" max="30" value="2" required>
 
         <label for="megjegyzes">Megjegyzés:</label>
@@ -34,6 +34,8 @@
 
         <button type="submit" id="mentesGomb">Foglalás mentése</button>
         <button type="button" id="megseGomb" hidden>Mégse</button>
+
+        <p>A <sup>*</sup>-gal jelölt mezők kitöltése kötelező!</p>
     </form>
 
     <h2>Foglalások listája</h2>
